@@ -1,23 +1,36 @@
-#define WIN32_LEAN_AND_MEAN
-#include <Windows.h>
-
+#include "bridge.h"
 #define S_API extern "C" __declspec(dllexport)
 
-S_API void Breakpad_SteamMiniDumpInit() {}
+S_API void Breakpad_SteamMiniDumpInit() { utils::funcLog(); }
 
-S_API void Breakpad_SteamSetAppID() {}
+S_API void Breakpad_SteamSetAppID() { utils::funcLog(); }
 
-S_API int Breakpad_SteamSetSteamID() { return 0; }
+S_API int Breakpad_SteamSetSteamID() {
+  utils::funcLog();
+  return 0;
+}
 
-S_API int Breakpad_SteamWriteMiniDumpSetComment() { return 0; }
+S_API int Breakpad_SteamWriteMiniDumpSetComment() {
+  utils::funcLog();
+  return 0;
+}
 
-S_API void Breakpad_SteamWriteMiniDumpUsingExceptionInfoWithBuildId() {}
+S_API void Breakpad_SteamWriteMiniDumpUsingExceptionInfoWithBuildId() {
+  utils::funcLog();
+}
 
-S_API bool Steam_BConnected() { return true; }
+S_API bool Steam_BConnected() {
+  utils::funcLog();
+  return true;
+}
 
-S_API bool Steam_BLoggedOn() { return true; }
+S_API bool Steam_BLoggedOn() {
+  utils::funcLog();
+  return true;
+}
 
 S_API int CreateInterface() {
+  utils::funcLog();
   int iProcAddr = 0;
   HMODULE hModule = 0;
 
